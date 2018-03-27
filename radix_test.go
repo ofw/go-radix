@@ -35,7 +35,7 @@ func TestRadix(t *testing.T) {
 	for k, v := range inp {
 		out, ok := r.Get(k)
 		if !ok {
-			t.Fatalf("missing key: %v", k)
+			t.Fatalf("missing Key: %v", k)
 		}
 		if out != v {
 			t.Fatalf("value mis-match: %v %v", out, v)
@@ -55,7 +55,7 @@ func TestRadix(t *testing.T) {
 	for k, v := range inp {
 		out, ok := r.Delete(k)
 		if !ok {
-			t.Fatalf("missing key: %v", k)
+			t.Fatalf("missing Key: %v", k)
 		}
 		if out != v {
 			t.Fatalf("value mis-match: %v %v", out, v)
